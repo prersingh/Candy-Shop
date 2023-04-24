@@ -17,6 +17,15 @@ function App() {
   const addToCart = () => {
     setCartCount((prevCount) => prevCount+1)
   }
+
+  const addToCart2 = () => {
+    setCartCount((prevCount) => prevCount+2)
+  }
+
+  const addToCart3 = () => {
+    setCartCount((prevCount) => prevCount+3)
+  }
+
   const deleteCart = (product) => {
     setProducts(products.filter((p) => p!== product));
     setCartCount((prevCount) => prevCount-1)
@@ -25,8 +34,8 @@ function App() {
   return (
     <>
     <Header cartCount={cartCount}/>
-    <Form addProduct={addProduct} addToCart={addToCart} />
-    <Products products={products} addToCart={addToCart} deleteCart={deleteCart}/>
+    <Form addProduct={addProduct} addToCart={addToCart} addToCart2={addToCart2} addToCart3={addToCart3} />
+    <Products products={products} addToCart={addToCart} addToCart2={addToCart2} addToCart3={addToCart3}  deleteCart={deleteCart}/>
     </>
   );
 };
